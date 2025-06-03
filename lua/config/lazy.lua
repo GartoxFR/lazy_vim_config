@@ -13,6 +13,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+-- vim.opt.tapstop = 4
+-- vim.opt.shiftwidth = 4
 
 require("lazy").setup({
   spec = {
