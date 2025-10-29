@@ -15,6 +15,16 @@ return {
                             },
                             -- Add clippy lints for Rust if using rust-analyzer
                             checkOnSave = true,
+                            check = {
+                                command = "clippy",
+                                args = {
+                                    "--frozen",
+                                    "--offline",
+                                    "--",
+                                    "-W",
+                                    "warnings"
+                                }
+                            },
                             -- Enable diagnostics if using rust-analyzer
                             diagnostics = {
                                 enable = true,
